@@ -28,6 +28,23 @@ public class ex9 {
 		for(int i = 0; i < myLotto.length; i++) {
 			System.out.println(myLotto[i] + "      ");
 		}
+		
+		int temp;
+		
+		for(int i = 0; i < myLotto.length; i++) {
+            for (int j = 0; j < myLotto.length - i - 1; j++){
+                if (myLotto[j] > myLotto[j+1]){
+                    temp = myLotto[j];
+                    myLotto[j] = myLotto[j + 1];
+                    myLotto[j + 1] = temp;
+                }
+            }
+
+        }
+		for(int i = 0; i < myLotto.length; i++) {
+			System.out.println(myLotto[i] + "      ");
+		}
+		
 	}
 
 }
